@@ -1,0 +1,45 @@
+.history-tools {
+  margin-bottom: 18px;
+}
+
+.history-search {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: #f8fafc;
+  border-radius: 14px;
+  padding: 13px 14px;
+  outline: none;
+  font-size: 14px;
+}
+
+.history-search:focus {
+  background: white;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+.empty-table {
+  text-align: center;
+  color: var(--muted);
+  padding: 28px;
+}
+
+.history-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.danger-outline-btn {
+  border: 1px solid #fecaca;
+  background: #fff1f2;
+  color: #dc2626;
+  border-radius: 14px;
+  padding: 11px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.danger-outline-btn:hover {
+  background: #fee2e2;
+}

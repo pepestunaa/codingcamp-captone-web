@@ -1,0 +1,82 @@
+/* ===== RESTORE STATIC SIDEBAR ===== */
+
+.sidebar-toggle,
+.sidebar-floating-toggle,
+.sidebar-close-btn,
+.sidebar-open-btn {
+  display: none !important;
+}
+
+.layout {
+  display: flex !important;
+}
+
+.sidebar {
+  position: fixed !important;
+  left: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  width: 280px !important;
+  min-height: 100vh !important;
+  transform: none !important;
+}
+
+.main {
+  margin-left: 280px !important;
+  width: calc(100% - 280px) !important;
+}
+
+/* ===== FIX FONT WEIGHT AFTER TAILWIND ===== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+label {
+  font-weight: 700;
+}
+
+.brand h2,
+.topbar h1,
+.login-title-area h1,
+.login-card h2 {
+  font-weight: 800 !important;
+}
+
+.kpi-card h2,
+.kpi-value,
+.score-circle span,
+.action-item p,
+.badge,
+.primary-btn,
+.secondary-btn,
+.logout-btn,
+.menu-item.active {
+  font-weight: 800 !important;
+}
+
+.menu-item,
+.form-group label,
+.card h3,
+.point-list strong,
+.tech-list strong {
+  font-weight: 700 !important;
+}
+
+.card p,
+.card-desc,
+.user-box p,
+.brand p,
+small,
+span {
+  font-weight: 400;
+}
+
+.menu-item,
+.menu-item.active,
+.logout-btn {
+  font-weight: 500 !important;
+}
