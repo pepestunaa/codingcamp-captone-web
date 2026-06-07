@@ -494,7 +494,7 @@ function renderPage() {
             ${inputField('Jumlah Tanggungan', 'dependent_count', 'number', '')}
             ${selectField('Pendidikan', 'education_level', ['Graduate', 'High School', 'Uneducated', 'College', 'Post-Graduate', 'Doctorate', 'Unknown'])}
             ${selectField('Status Pernikahan', 'marital_status', ['Married', 'Single', 'Divorced', 'Unknown'])}
-            ${selectField('Kategori Pendapatan', 'income_category', ['Kurang dari $40K', '$40K - $60K', '$60K - $80K', '$80K - $120K', '$120K +', 'Unknown'])}
+            ${selectField('Kategori Pendapatan', 'income_category', ['Less than $40K', '$40K - $60K', '$60K - $80K', '$80K - $120K', '$120K +', 'Unknown'])}
           </div>
 
           <h4>Informasi Akun</h4>
@@ -920,12 +920,17 @@ function setupPredictionForm() {
       showResult(result, data)
       saveHistory(result, data)
     } catch (error) {
-      const result = createDummyResult(data)
+      console.error('Prediction API error:', error)
 
-      localStorage.removeItem('historyViewCleared')
-    
-      showResult(result, data)
-      saveHistory(result, data)
+      const errorMessage = error.response?.data?.message || error.message || 'Gagal terhubung ke backend'
+
+      resultCard.innerHTML = `
+        <h3>Hasil Prediksi</h3>
+        <div class="error-box">
+          <p><strong>Prediksi gagal:</strong> ${errorMessage}</p>
+          <p>Pastikan backend API berjalan dan dapat diakses.</p>
+        </div>
+      `
     }
   })
 }

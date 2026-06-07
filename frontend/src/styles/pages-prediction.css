@@ -113,3 +113,14 @@
 .small-info p {
   margin-top: 8px;
 }
+
+.error-box {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 16px;
+  padding: 18px;
+  margin-top: 14px;
+  color: #991b1b;
+  font-size: 14px;
+  line-height: 1.7;
+}
